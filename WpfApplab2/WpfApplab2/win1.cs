@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
 using System.IO;
 using System.Windows.Controls;
@@ -21,21 +17,21 @@ namespace WpfApplab2
         Button B1 = new Button();
         Button B2 = new Button();
         Button B3 = new Button();
-        public void To1Window_Click(object sender, RoutedEventArgs e)
+        Grid g = new Grid();
+
+        public win1()
         {
-            MainWindow w_1 = new MainWindow();
-            Grid g = new Grid();
             w_1.Width = 800;
             w_1.Height = 750;
-            g = addTextBoxToGrid(g, new singularity(150, 90, 70, 580, "number of the book", TB1));
-            g = addTextBoxToGrid(g, new singularity(150, 90, 320, 580, "ПІБ", TB2));
-            g = addTextBoxToGrid(g, new singularity(150, 90, 570, 580, "date of birth", TB3));
-            g = addLabelToGrid(g, new singularity(150, 90, 70, 400, "", LB1));
-            g = addLabelToGrid(g, new singularity(150, 90, 320, 400, "", LB2));
-            g = addLabelToGrid(g, new singularity(150, 90, 570, 400, "", LB3));
-            g = addButtonToGrid(g, new singularity(150, 90, 140, 120, "write", B1), B1_Click);
-            g = addButtonToGrid(g, new singularity(150, 90, 140, 120, "delete", B2), B2_Click);
-            g = addButtonToGrid(g, new singularity(150, 90, 140, 120, "GoToMain", B3), GoToMain_Click);
+            addTextBoxToGrid(new singularity(150, 90, 470, 350, "", TB1));
+            addTextBoxToGrid(new singularity(150, 90, 320, 350, "", TB2));
+            addTextBoxToGrid(new singularity(150, 90, 170, 350, "", TB3));
+            addLabelToGrid(new singularity(150, 90, 330, 300, "number of the book", LB1));
+            addLabelToGrid(new singularity(150, 90, 220, 300, "ПІБ", LB2));
+            addLabelToGrid(new singularity(150, 90, 500, 300, "date of birth", LB3));
+            addButtonToGrid(new singularity(150, 90, 250, 500, "write", B1), B1_Click);
+            addButtonToGrid(new singularity(150, 90, 420, 500, "delete", B2), B2_Click);
+            addButtonToGrid(new singularity(150, 90, 600, 600, "GoToMain", B3), GoToMain_Click);
             w_1.Content = g;
             //Hide();
             w_1.Show();
@@ -43,7 +39,7 @@ namespace WpfApplab2
         public void GoToMain_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mw = new MainWindow();
-            //this.Hide();
+            w_1.Hide();
             mw.Show();
         }
         public void B1_Click(object sender, RoutedEventArgs e)
@@ -64,53 +60,40 @@ namespace WpfApplab2
             TB2.Text = "";
             TB3.Text = "";
         }
-        public Grid addTextBoxToGrid(Grid gr, singularity sing)
+        public void addTextBoxToGrid(singularity sing)
         {
             TextBox tb = new TextBox();
             tb.Width = sing.width;
             tb.Height = sing.height;
-            gr.Children.Add(sing.GetUIElement());
-            return gr;
+            tb.Margin = new Thickness(sing.left, sing.top, 0, 0);
+            tb.Text = sing.cont;
+            tb.HorizontalAlignment = HorizontalAlignment.Left;
+            tb.VerticalAlignment = VerticalAlignment.Top;
+            g.Children.Add(tb);
         }
-        public Grid addButtonToGrid(Grid gr, singularity sing, RoutedEventHandler func)
+        public void addButtonToGrid(singularity sing, RoutedEventHandler func)
         {
             Button b = new Button();
             b.Width = sing.width;
             b.Height = sing.height;
+            b.Margin = new Thickness(sing.left, sing.top, 0, 0);
+            b.Content = sing.cont;
+            b.HorizontalAlignment = HorizontalAlignment.Left;
+            b.VerticalAlignment = VerticalAlignment.Top;
             b.Click += func;
-            gr.Children.Add(sing.GetUIElement());
-            return gr;
+            g.Children.Add(b);
+            
         }
-        public Grid addLabelToGrid(Grid gr, singularity sing)
+        public void addLabelToGrid(singularity sing)
         {
             Label lb = new Label();
             lb.Width = sing.width;
             lb.Height = sing.height;
-            gr.Children.Add(sing.GetUIElement());
-            return gr;
+            lb.Margin = new Thickness(sing.left, sing.top, 0, 0);
+            lb.Content = sing.cont;
+            lb.HorizontalAlignment = HorizontalAlignment.Left;
+            lb.VerticalAlignment = VerticalAlignment.Top;
+            g.Children.Add(lb);
         }
-        public class singularity
-        {
-            public int width;
-            public int height;
-            public int left;
-            public int top;
-            public string cont;
-            public UIElement control;
-            public UIElement GetUIElement()
-            {
-                return control;
-            }
-            public singularity(int wid, int heig, int lef, int t, string con,  UIElement control)
-            {
-                wid = this.width;
-                heig = this.height;
-                lef = this.left;
-                t = this.top;
-                con = this.cont;
-                control = this.control;
-            }
-        }
-
     }
 }
