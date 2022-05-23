@@ -1,0 +1,14 @@
+﻿<Page x:Class="coursework.Page2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:coursework"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="545"
+      Title="Page2">
+
+    <Grid Margin="330,0,0,0">
+        <DataGrid x:Name="dt1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="-330,-5,5,0"/>
+    </Grid>
+</Page>

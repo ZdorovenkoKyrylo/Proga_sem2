@@ -1,0 +1,20 @@
+﻿<Window x:Class="coursework.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:coursework"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/1616522875_16-p-ochen-krasivii-fon-18.jpg"/>
+        </Grid.Background>
+        <Button Content="PassingInfo" Margin="40,329,590,50" BorderBrush="#FF8E2020" Background="#FFAF9A37" Click="Button_Click_4" FontSize="20" FontFamily="Times New Roman" FontStyle="Italic" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" Foreground="White" />
+        <Button Content="LivingInfo" Margin="40,189,590,190" Background="#FF5A56EC" Click="Button_Click_2" FontSize="20" FontFamily="Times New Roman" FontStyle="Italic" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" Foreground="White"/>
+        <Button Content="RewardInfo" Margin="40,119,590,260" Background="#FF423EE4" Click="Button_Click_1" FontSize="20" FontFamily="Times New Roman" FontStyle="Italic" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" Foreground="White"/>
+        <Button Content="PersonalInfo" Margin="40,39,590,340" Background="#FF162FB9" Click="Button_Click" FontSize="20" FontFamily="Times New Roman" FontStyle="Italic" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" Foreground="White"/>
+        <Frame x:Name="Main" Margin="245,10,10,0"/>
+        <Button Content="ScheduleInfo" Margin="40,259,590,120" Background="#FF379CAF" Click="Button_Click_3" FontSize="20" FontFamily="Times New Roman" FontStyle="Italic" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" Foreground="White"/>
+    </Grid>
+</Window>
