@@ -8,8 +8,10 @@
       d:DesignHeight="450" d:DesignWidth="545"
       Title="Page1">
 
-    <Grid Margin="440,0,-40,0">
-        <DataGrid x:Name="dt1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="-440,-3,15,193"/>
-        <DataGrid x:Name="dt_sort" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="-440,205,10,2"/>
+    <Grid Margin="5,-15,-5,15" Width="545" Height="450">
+
+        <DataGrid x:Name="dt_sort" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="-5,0,0,90"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="-5,360,0,0" VerticalAlignment="Top" Height="42" Width="275" FontSize="20" FontStyle="Italic" Click="Delete_Click" Background="#FF4AD4B1"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="270,359,0,0" VerticalAlignment="Top" Height="43" Width="295" Click="Add_Click" FontSize="20" FontStyle="Italic" Background="#FF4AD4B1"/>
     </Grid>
 </Page>

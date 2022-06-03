@@ -1,0 +1,251 @@
+﻿<Window x:Class="coursework.InsertInto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:coursework"
+        mc:Ignorable="d"
+        Title="InsertInto" Height="450" Width="800">
+    
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/index.jpg"/>
+        </Grid.Background>
+        <Button Content="Insert" HorizontalAlignment="Left" Margin="600,364,0,0" VerticalAlignment="Top" Height="45" Width="195" Click="Button_Click" Background="#FF757798" FontSize="22" FontStyle="Italic" FontWeight="Bold" Foreground="#FFD6D6D6"/>
+        <TextBox x:Name="dateofbirth" HorizontalAlignment="Left" Height="50" Margin="10,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="295" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontStyle="Italic">
+            <TextBox.Style>
+                <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                    <Style.Resources>
+                        <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                            <VisualBrush.Visual>
+                                <Label Content="Dateofbirth" Foreground="LightGray" />
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Style.Resources>
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="Background" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+        <TextBox x:Name="phonenumber" HorizontalAlignment="Left" Height="50" Margin="10,79,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="295" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontStyle="Italic">
+            <TextBox.Style>
+                <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                    <Style.Resources>
+                        <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                            <VisualBrush.Visual>
+                                <Label Content="Phonenumber" Foreground="LightGray" />
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Style.Resources>
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="Background" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBox x:Name="adress" HorizontalAlignment="Left" Height="50" Margin="10,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="295" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontStyle="Italic">
+            <TextBox.Style>
+                <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                    <Style.Resources>
+                        <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                            <VisualBrush.Visual>
+                                <Label Content="Adress" Foreground="LightGray" />
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Style.Resources>
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="Background" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBox x:Name="city" HorizontalAlignment="Left" Height="50" Margin="11,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="295" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontStyle="Italic">
+            <TextBox.Style>
+                <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                    <Style.Resources>
+                        <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                            <VisualBrush.Visual>
+                                <Label Content="City" Foreground="LightGray" />
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Style.Resources>
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="Background" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBox x:Name="school" HorizontalAlignment="Left" Height="75" Margin="13,274,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="295" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontStyle="Italic">
+            <TextBox.Style>
+                <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                    <Style.Resources>
+                        <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                            <VisualBrush.Visual>
+                                <Label Content="School" Foreground="LightGray" />
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Style.Resources>
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="Background" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBox x:Name="fullname" HorizontalAlignment="Left" Height="50" Margin="15,359,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="295" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontStyle="Italic">
+            <TextBox.Style>
+                <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                    <Style.Resources>
+                        <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                            <VisualBrush.Visual>
+                                <Label Content="Name" Foreground="LightGray" />
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Style.Resources>
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="Background" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+        <ComboBox x:Name="CB1" HorizontalAlignment="Left" Height="35" Margin="355,69,0,0" VerticalAlignment="Top" Width="230" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <ComboBoxItem Content="Фізика" />
+            <ComboBoxItem Content="Хімія"/>
+            <ComboBoxItem Content="Українська мова"/>
+            <ComboBoxItem Content="Українська мова і література"/>
+            <ComboBoxItem Content="Математика"/>
+            <ComboBoxItem Content="Іспанська мова"/>
+            <ComboBoxItem Content="Німецька мова"/>
+            <ComboBoxItem Content="Французька мова"/>
+            <ComboBoxItem Content="Англійська мова"/>
+            <ComboBoxItem Content="Історія України"/>
+            <ComboBoxItem Content="Географія"/>
+            <ComboBoxItem Content="Біологія"/>
+        </ComboBox>
+        <ComboBox x:Name="CB2" HorizontalAlignment="Left" Height="35" Margin="355,19,0,0" VerticalAlignment="Top" Width="230" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <ComboBoxItem Content="Фізика" />
+            <ComboBoxItem Content="Хімія"/>
+            <ComboBoxItem Content="Українська мова"/>
+            <ComboBoxItem Content="Українська мова і література"/>
+            <ComboBoxItem Content="Математика"/>
+            <ComboBoxItem Content="Іспанська мова"/>
+            <ComboBoxItem Content="Німецька мова"/>
+            <ComboBoxItem Content="Французька мова"/>
+            <ComboBoxItem Content="Англійська мова"/>
+            <ComboBoxItem Content="Історія України"/>
+            <ComboBoxItem Content="Географія"/>
+            <ComboBoxItem Content="Біологія"/>
+        </ComboBox>
+        <ComboBox x:Name="CB3" HorizontalAlignment="Left" Height="35" Margin="355,119,0,0" VerticalAlignment="Top" Width="230" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <ComboBoxItem Content="Фізика" />
+            <ComboBoxItem Content="Хімія"/>
+            <ComboBoxItem Content="Українська мова"/>
+            <ComboBoxItem Content="Українська мова і література"/>
+            <ComboBoxItem Content="Математика"/>
+            <ComboBoxItem Content="Іспанська мова"/>
+            <ComboBoxItem Content="Німецька мова"/>
+            <ComboBoxItem Content="Французька мова"/>
+            <ComboBoxItem Content="Англійська мова"/>
+            <ComboBoxItem Content="Історія України"/>
+            <ComboBoxItem Content="Географія"/>
+            <ComboBoxItem Content="Біологія"/>
+        </ComboBox>
+        <ComboBox x:Name="CB4" HorizontalAlignment="Left" Height="35" Margin="355,174,0,0" VerticalAlignment="Top" Width="230" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <ComboBoxItem Content="Фізика" />
+            <ComboBoxItem Content="Хімія"/>
+            <ComboBoxItem Content="Українська мова"/>
+            <ComboBoxItem Content="Українська мова і література"/>
+            <ComboBoxItem Content="Математика"/>
+            <ComboBoxItem Content="Іспанська мова"/>
+            <ComboBoxItem Content="Німецька мова"/>
+            <ComboBoxItem Content="Французька мова"/>
+            <ComboBoxItem Content="Англійська мова"/>
+            <ComboBoxItem Content="Історія України"/>
+            <ComboBoxItem Content="Географія"/>
+            <ComboBoxItem Content="Біологія"/>
+        </ComboBox>
+        <ComboBox x:Name="CB5" HorizontalAlignment="Left" Height="35" Margin="355,224,0,0" VerticalAlignment="Top" Width="230" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <ComboBoxItem Content="Фізика" />
+            <ComboBoxItem Content="Хімія"/>
+            <ComboBoxItem Content="Українська мова"/>
+            <ComboBoxItem Content="Українська мова і література"/>
+            <ComboBoxItem Content="Математика"/>
+            <ComboBoxItem Content="Іспанська мова"/>
+            <ComboBoxItem Content="Німецька мова"/>
+            <ComboBoxItem Content="Французька мова"/>
+            <ComboBoxItem Content="Англійська мова"/>
+            <ComboBoxItem Content="Історія України"/>
+            <ComboBoxItem Content="Географія"/>
+            <ComboBoxItem Content="Біологія"/>
+        </ComboBox>
+        <ComboBox x:Name="CB_Pilga" HorizontalAlignment="Left" Height="35" Margin="355,284,0,0" VerticalAlignment="Top" Width="230" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <ComboBoxItem Content="Сільський коефіцієнт" />
+            <ComboBoxItem Content="Донбас" />
+            <ComboBoxItem Content="Сирота"/>
+            <ComboBoxItem Content="Інвалід"/>
+        </ComboBox>
+        <ComboBox x:Name="CB_Reward" HorizontalAlignment="Left" Height="35" Margin="355,339,0,0" VerticalAlignment="Top" Width="230" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <ComboBoxItem Content="Всеукраїнська олімпіада з математики" />
+            <ComboBoxItem Content="Всеукраїнська олімпіада з фізики" />
+            <ComboBoxItem Content="Всеукраїнська олімпіада з мови"/>
+            <ComboBoxItem Content="Всеукраїнська олімпіада з історії"/>
+            <ComboBoxItem Content="МАН"/>
+        </ComboBox>
+        <TextBox x:Name="Mark5" HorizontalAlignment="Left" Height="35" Margin="600,224,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontStyle="Italic"/>
+        <TextBox x:Name="Mark4" HorizontalAlignment="Left" Height="35" Margin="600,169,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontStyle="Italic"/>
+        <TextBox x:Name="Mark3" HorizontalAlignment="Left" Height="35" Margin="600,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontStyle="Italic"/>
+        <TextBox x:Name="Mark2" HorizontalAlignment="Left" Height="35" Margin="600,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontStyle="Italic"/>
+        <TextBox x:Name="Mark1" HorizontalAlignment="Left" Height="35" Margin="600,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontStyle="Italic"/>
+
+    </Grid>
+</Window>

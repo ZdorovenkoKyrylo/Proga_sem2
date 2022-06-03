@@ -1,0 +1,23 @@
+﻿<Window x:Class="coursework.Calculus"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:coursework"
+        mc:Ignorable="d"
+        Title="Calculus" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/1626779652_17-kartinkin-com-p-fon-tsvetnoi-gradient-krasivo-19.jpg"/>
+        </Grid.Background>
+        <TextBox x:Name="FullName" TextWrapping="Wrap" Text="" Margin="10,64,410,320" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" FontStyle="Italic"/>
+        <Button Content="ShowResults" Margin="525,364,0,0" Click="Button_Click" FontSize="20" FontStyle="Italic" Background="#FFD8AD8E"/>
+        <DataGrid x:Name="dt1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,309,420,0"/>
+        <Label x:Name="AvPoint" Content="" Margin="530,14,5,325" FontSize="20" FontStyle="Italic" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.509,-0.199"/>
+        <Label x:Name="ReitPoint" Content="" Margin="530,154,5,185" FontSize="20" FontStyle="Italic" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBlock TextWrapping="Wrap" Text="Average" Margin="390,29,285,345" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock TextWrapping="Wrap" Text="Rating" Margin="418,176,0,0" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" RenderTransformOrigin="0.528,3.686"/>
+        <Image x:Name="im" Margin="92,127,532,132" Width="175" Height="175"/>
+        <TextBlock HorizontalAlignment="Left" Margin="144,29,0,0" TextWrapping="Wrap" Text="Input Fullname" VerticalAlignment="Top" FontSize="20" FontStyle="Italic"/>
+    </Grid>
+</Window>

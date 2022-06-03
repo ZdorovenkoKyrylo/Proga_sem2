@@ -31,20 +31,11 @@ namespace coursework
             
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new Page2();
-        }
-
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Page3();
+            Main.Content = new Page6();
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new Page4();
-        }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {

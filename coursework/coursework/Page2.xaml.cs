@@ -34,24 +34,6 @@ namespace coursework
             Applicant_RewardsInfo();
 
         }
-        public static DataTable cropDate(DataTable Table, int dateColumn)
-        {
-            DataTable dtCloned = Table.Clone();
-            dtCloned.Columns[dateColumn].DataType = typeof(string);
-            foreach (DataRow row in Table.Rows)
-            {
-                DataRow temp = dtCloned.NewRow();
-                for (int i = 0; i < Table.Columns.Count; i++)
-                {
-                    if (i == dateColumn)
-                        temp[i] = row[dateColumn].ToString().Split(' ')[0];
-                    else
-                        temp[i] = row[i];
-                }
-                dtCloned.Rows.Add(temp);
-            }
-            return dtCloned;
-        }
         private void GetandShowData(string SQLQuery, DataGrid dataGrid)
         {
             connection = new SqlConnection(ConnectionString);
@@ -76,7 +58,7 @@ namespace coursework
                               "CityID as [CityID]," +
                               "SchoolID as [SchoolID]," +
                               "FullName as [FullName], " +
-                              "dbo.Rewards.Name as [RewName]," +
+                              "dbo.Rewards.Name, " +
                               "dbo.Rewards.PercentofReward " +
                               "From dbo.Applicant " +
                               "LEFT OUTER JOIN dbo.RewardsApplicant " +
@@ -85,31 +67,12 @@ namespace coursework
                               "ON dbo.RewardsApplicant.RewardID = dbo.Rewards.RewardID;";
             try
             {
-                connection = new SqlConnection(ConnectionString);
-                connection.Open();
-
-                var command = new SqlCommand(query, connection);
-                var adapter = new SqlDataAdapter(command);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-
-                var temp = cropDate(dt, 1);
-
-                dt1.ItemsSource = temp.DefaultView;
-                connection.Close();
+                GetandShowData(query, dt);
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(e.Message);
             }
-            //try
-            //{
-            //    GetandShowData(query, dt);
-            //}
-            //catch (Exception e)
-            //{
-            //    MessageBox.Show(e.Message);
-            //}
         }
     }
 }
